@@ -6,7 +6,7 @@ let users = [];
 
 //* If the user chooses to sign up
 
-// // Email
+// Email
 function email(email) {
 let checkForEmailSpaces = email.replace(/\s/g, "").toLowerCase();
 if (checkForEmailSpaces.length > 10 && checkForEmailSpaces.includes('@')) {
@@ -52,6 +52,26 @@ while (true) {
         break;
     }
 }
+while (true) {
+    let userPassword = password(prompt("Enter your password:"));
+    if (userPassword) {
+        userPasswordValue = userPassword;
+        tritedpassword = userPasswordValue;
+        if (confirmedPass(prompt("Confirm Your Password:"))) {
+            finalValidPassword = userPasswordValue;
+            alert("Your Password: " + userPasswordValue + " Was Saved");
+            break;
+    }
+}
+}
+
+users.push({
+    FullName: userNameValue,
+    loginEmail: finalValidEmail,
+    loginPassword: finalValidPassword
+});
+console.log(users);
+
 
 
 

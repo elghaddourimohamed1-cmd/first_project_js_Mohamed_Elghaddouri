@@ -84,23 +84,32 @@ let users = [];
 
 
 
-//* If the user chooses to log in
+// //* If the user chooses to log in
 
-// let usersDb = []
-// let users = []
-let loginEmail = prompt("Enter LogIn Email : ");
+// // let usersDb = []
+// // let users = []
+// let loginEmail = prompt("Enter LogIn Email : ");
 
-let findEmail = users.find(em => em.loginEmail === loginEmail);
-if (findEmail) {
-    console.log("correct email"); 
-}
-let loginPassword = prompt("Enter Login Password : ");
+// let findEmail = users.find(em => em.loginEmail === loginEmail);
+// if (findEmail) {
+//     console.log("correct email"); 
+// }
+// let loginPassword = prompt("Enter Login Password : ");
 
-let findPassword = users.find(em => em.loginPassword === loginPassword);
-if (findPassword) {
-    console.log("correct password"); 
-}
+// let findPassword = users.find(em => em.loginPassword === loginPassword);
+// if (findPassword) {
+//     console.log("correct password"); 
+// }
 
+//* change the password
+let users = [{loginEmail: 'elgaddouri@gmail.com', loginPassword: '1111@1111'},{loginEmail: 'med@icloud.com', loginPassword: '9999@9999'}];
+
+let associatedEmailPass = prompt("Entering The Email Address Associated With Your Account : ");
+let searchForEmail = users.find(associateEmail => associateEmail.loginEmail === associatedEmailPass)
+let changePass = prompt("Change Your Account Password : ");
+searchForEmail.loginPassword = changePass
+// console.log(searchForEmail);
+console.log(users);
 
 
 

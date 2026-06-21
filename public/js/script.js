@@ -72,18 +72,34 @@ let users = [];
 // });
 // console.log(users);
 
-// age 
-function age(age) {
-if (typeof (age === Number) && age != 0 && age.toString().length <= 2) {
-    let removeAgeSpaces = age.toString().replace(/\s/, "");
-    // console.log(removeAgeSpaces);
+// // age 
+// function age(age) {
+// if (typeof (age === Number) && age != 0 && age.toString().length <= 2) {
+//     let removeAgeSpaces = age.toString().replace(/\s/, "");
+//     // console.log(removeAgeSpaces);
+// }
+// }
+// age(22)
+// console.log(users);
+
+
+
+//* If the user chooses to log in
+
+// let usersDb = []
+// let users = []
+let loginEmail = prompt("Enter LogIn Email : ");
+
+let findEmail = users.find(em => em.loginEmail === loginEmail);
+if (findEmail) {
+    console.log("correct email"); 
 }
+let loginPassword = prompt("Enter Login Password : ");
+
+let findPassword = users.find(em => em.loginPassword === loginPassword);
+if (findPassword) {
+    console.log("correct password"); 
 }
-age(22)
-console.log(users);
-
-
-
 
 
 

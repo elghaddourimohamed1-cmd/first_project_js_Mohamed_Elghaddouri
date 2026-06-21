@@ -102,14 +102,45 @@ let users = [];
 // }
 
 //* change the password
-let users = [{loginEmail: 'elgaddouri@gmail.com', loginPassword: '1111@1111'},{loginEmail: 'med@icloud.com', loginPassword: '9999@9999'}];
+// let users = [{loginEmail: 'elgaddouri@gmail.com', loginPassword: '1111@1111'},{loginEmail: 'med@icloud.com', loginPassword: '9999@9999'}];
 
-let associatedEmailPass = prompt("Entering The Email Address Associated With Your Account : ");
-let searchForEmail = users.find(associateEmail => associateEmail.loginEmail === associatedEmailPass)
-let changePass = prompt("Change Your Account Password : ");
-searchForEmail.loginPassword = changePass
-// console.log(searchForEmail);
-console.log(users);
+// let associatedEmailPass = prompt("Entering The Email Address Associated With Your Account : ");
+// let searchForEmail = users.find(associateEmail => associateEmail.loginEmail === associatedEmailPass)
+// let changePass = prompt("Change Your Account Password : ");
+// searchForEmail.loginPassword = changePass
+// // console.log(searchForEmail);
+// console.log(users);
 
 
+//* login dashboard
+
+while (true) {
+    let dashboard = prompt(`
+1 - Logout
+2 - Withdraw Money
+3 - Deposit Money
+4 - Take a Loan
+5 - Invest
+6 - History
+`);
+
+    if (dashboard === "1" || dashboard === "Logout" || dashboard === "logout" || dashboard === "log out") {
+        break;
+    }   
+    if (dashboard === "2" || dashboard === "Withdraw" || dashboard === "withdraw") {
+        continue; // show the menu again
+    }
+    if (dashboard === "3" || dashboard === "Deposit" || dashboard === "deposit") {
+
+    }
+    if (dashboard === "4" || dashboard === "Loan" || dashboard === "loan") {
+
+    }
+    if (dashboard === "5" || dashboard === "Invest" || dashboard === "invest") {
+
+    }
+    if (dashboard === "6" || dashboard === "History" || dashboard === "history") {
+
+    }   
+}
 
